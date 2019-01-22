@@ -1,0 +1,11 @@
+<%=flash[:success]%>
+
+<h1><%= @item.name %></h1>
+<br>
+<%=image_tag("#{@item.picture_url}")%>
+<br>
+<%=@item.description%>
+<br>
+<h4>Price $<%=@item.price%></h4>
+<br>
+<%=button_to 'Add to order', "/items/#{@item.id}/add", {method: :patch} %>
