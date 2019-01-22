@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-validates_uniqueness_of :username
+validates_uniqueness_of :user_name
 
   has_many :orders
   has_many :items, through: :order

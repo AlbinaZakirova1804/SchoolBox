@@ -10,6 +10,7 @@ class OrdersController < ApplicationController
   end
 
   def cart
+    
     @cart=[]
     i = 0
     while i < session[:cart].length do
@@ -19,5 +20,18 @@ class OrdersController < ApplicationController
     end
   #  @item = Item.find(session[:cart][id])
     #byebug
+  end
+
+  def destroy_item
+
+    #item_is=@cart.find_by(i)
+    @@cart# = session[:cart]
+    #element_position=@cart.index()
+    #item = Item.find(session[:cart][i])
+    #i=a.detect{|w| w.i == params[:i]}
+    #@cart.delete_at(element_position)
+    byebug
+    session[:cart]=a
+
   end
 end

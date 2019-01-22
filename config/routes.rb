@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   patch '/items/:id/add', to: "items#add"
 
   get "/cart", to: "orders#cart", as: "cart"
+  delete "/cart/item/:id/delete", to: "orders#destroy_item"
 end
