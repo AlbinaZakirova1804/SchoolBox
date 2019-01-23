@@ -10,12 +10,13 @@ class OrdersController < ApplicationController
   end
 
   def cart
-    
+
     @cart=[]
     i = 0
     while i < session[:cart].length do
       item = Item.find(session[:cart][i])
-       @cart << item
+       @cart << item #item.id
+       #byebug
        i += 1
     end
   #  @item = Item.find(session[:cart][id])
@@ -24,14 +25,15 @@ class OrdersController < ApplicationController
 
   def destroy_item
 
-    #item_is=@cart.find_by(i)
-    @@cart# = session[:cart]
-    #element_position=@cart.index()
-    #item = Item.find(session[:cart][i])
-    #i=a.detect{|w| w.i == params[:i]}
-    #@cart.delete_at(element_position)
-    byebug
-    session[:cart]=a
-
+    #session[:cart].include?(params[:id].to_i)
+    a=session[:cart].index(params[:id].to_i)
+    #byebug
+    session[:cart].delete_at(a)
+    redirect_to "/cart"
   end
+  # private
+  # def item_params
+  #     byebug
+  #   params.require(:id).permit(:id)
+  # end
 end

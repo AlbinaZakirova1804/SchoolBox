@@ -3,6 +3,6 @@
 <%@cart.each do |item|%>
 <%=item.name %>
  <%=item.price%>
- <%=link_to "Delete","/cart/item/:id/delete", method: :delete%>
+ <%=link_to "Delete","/cart/item/#{item.id}/delete", method: :delete%>
  <br><br>
  <%end%>
