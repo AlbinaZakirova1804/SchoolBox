@@ -1,0 +1,7 @@
+<h3>You profile page! </h3>
+  <h4>Hi <%=@current_user.user_name%>!!!</h4>
+  <h4><%=@current_user.email%>!!!</h4>
+  <br>
+<%=link_to "Edit you profile", edit_user_path%>
+<br>
+<%=link_to "Return to Items", root_path%>

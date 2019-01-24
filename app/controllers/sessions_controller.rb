@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
       log_in!(@user)
       flash[:notes] = "Welcome to the App!"
-      redirect_to root_path#current_user
+      redirect_to root_path#'/users/:id/profile'#current_user
     else
       #flash[:error] = @user.errors.full_messages
       render :new

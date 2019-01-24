@@ -1,4 +1,4 @@
-
+<h1>You order was seccesfully placed!!!</h1>
 <%=flash[:success]%>
 
 <h1><%= @item.name %></h1>
@@ -10,3 +10,5 @@
 <h4>Price $<%=@item.price%></h4>
 <br>
 <%=button_to 'Add to order', "/items/#{@item.id}/add", {method: :patch} %>
+<br>
+<%=link_to "Your cart", '/cart'%>

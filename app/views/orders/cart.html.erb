@@ -6,3 +6,9 @@
  <%=link_to "Delete","/cart/item/#{item.id}/delete", method: :delete%>
  <br><br>
  <%end%>
+ <hr>
+ <h3>Total price: $<%= @total_sum%></h3>
+ <br>
+ <%=button_to "Place order!", '/orders/placed', method: :get%>
+ <br>
+ <%=link_to "Items", items_path%>
